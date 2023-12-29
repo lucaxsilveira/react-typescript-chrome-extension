@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "react-typescript-chrome-extension-boilerplate",
+    "description": "react with typescript for chrome extension",
+    "version": "1.0.0",
+    "action" : {
+        "default_popup": "popup.html",
+        "default_title": "RT Extension",
+        "default_icon" : "icon-48.png"
+    },
+    "permissions": [
+        "tabs",
+        "bookmarks",
+        "storage",
+        "identity",
+        "scripting",
+        "activeTab",
+        "contextMenus",
+        "clipboardRead",
+        "clipboardWrite",
+        "contentSettings"
+    ],
+    "host_permissions": ["<all_urls>"],
+    "icons": {
+        "16" : "icon-16.png",
+        "48" : "icon-48.png",
+        "128" : "icon-128.png"
+    },
+    "options_page": "options.html",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["contentScript.js"]
+        }
+    ]
+}

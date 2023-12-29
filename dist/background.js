@@ -1,0 +1,1 @@
+chrome.runtime.onMessage.addListener(((e,a)=>{var o;chrome.tabs.sendMessage(null===(o=a.tab)||void 0===o?void 0:o.id,{value:e.value+" + hello from background script"})}));

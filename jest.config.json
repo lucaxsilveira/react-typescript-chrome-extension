@@ -1,0 +1,16 @@
+{
+  "testEnvironment": "jsdom",
+  "setupFilesAfterEnv": [
+      "@testing-library/jest-dom/extend-expect"
+  ],
+  "transform": {
+    "^.+\\.tsx?$": "ts-jest",
+    ".+\\.(css|styl|less|sass|scss|png|jpg|ttf|woff|woff2)$": "jest-transform-stub",
+    "^.+\\.svg$": "jest-transformer-svg"
+  },
+  "moduleNameMapper": {
+    "\\.(jpg|ico|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/mocks/fileMock.js",
+    "\\.(css|less)$": "<rootDir>/mocks/fileMock.js",
+    "^@/(.*)$": "<rootDir>/src/$1"
+  }
+}

@@ -1,0 +1,22 @@
+body {
+  width: 400px;
+  height: 550px;
+  background: transparent;
+}
+
+body > div:first-child {
+  height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark {
+    .dark\:white-svg {
+        fill: #fff;
+    }
+    
+
+    .dark\:invert-img {
+      filter: invert(1);
+    }
+  }
+}
